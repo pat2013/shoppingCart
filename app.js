@@ -52,13 +52,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 //     next();
 // });
 
-// //prevent Cross-site request forgery attack setting
-// app.use(csrf());
-// app.use(function(req, res, next) {
-//     console.log('prevent csrf attack', req.csrfToken());
-//     res.cookie('XSRF-TOKEN', req.csrfToken());
-//     return next();
-// });
+//prevent Cross-site request forgery attack setting
+app.use(csrf());
+app.use(function(req, res, next) {
+    console.log('prevent csrf attack', req.csrfToken());
+    res.cookie('XSRF-TOKEN', req.csrfToken());
+    return next();
+});
 
 app.use('/users', users);
 app.use('/products', products);
