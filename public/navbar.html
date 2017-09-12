@@ -1,0 +1,41 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+            <a class="navbar-brand" href="#/products"><i class="fa fa-home" aria-hidden="true"></i> Mini MP</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <form class="navbar-form navbar-left">
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <i class="glyphicon glyphicon-search form-control-feedback"></i>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li ng-hide="hide"><a href="#/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping Cart <span class="badge">{{totalQty}}</span></a></li>
+                <li ng-hide="signIn"><a href="#/signup" data-toggle="modal" data-target="#myModal"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a></li>
+                <li ng-hide="signIn"><a href="#/signin"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+                <li ng-show="signIn" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> User Mangement <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a ng-show="signIn" href="#/profile">Profile</a></li>
+                        <li><a href="#/orders">Orders</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>

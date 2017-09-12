@@ -1,0 +1,19 @@
+<div class="row" ng-controller="proCtrl">
+    <div ng-include src="'./navbar.html'"></div>
+    <div ng-repeat="p in products">
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img src={{p.image}} alt="...">
+                <div class="caption">
+                    <h3>{{p.title}}</h3>
+                    <p class="discription">{{p.dis}}</p>
+
+                    <div class="clearfix">
+                        <div class="price pull-left"> ${{p.price}}</div>
+                        <a class="btn btn-success pull-right" ng-click="addToCart(p._id)" role="button">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

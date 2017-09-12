@@ -1,0 +1,29 @@
+*,
+body {
+    margin: 0px;
+    padding: 0px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+#myBtn {
+    display: none;
+    background-color: lightgray;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#myBtn:hover {
+    background-color: gray;
+}
