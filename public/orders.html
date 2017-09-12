@@ -1,6 +1,9 @@
 <div class="row" ng-controller="orderCtrl">
     <div ng-include src="'./navbar.html'"></div>
     <h4>My Orders</h4>
+    <div ng-if="orders">
+        <h2>You have no orders</h2>
+    </div>
     <div ng-repeat="o in orders.data">
         <div class="panel panel-default">
             <div class="panel-body">
